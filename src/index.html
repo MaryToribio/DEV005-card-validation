@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>Tarjeta de crédito válida</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validacion de tarjeta de credito </title>
     <link rel="stylesheet" href="style.css" />
-    <script src="index.js"></script>
 </head>
 
 <body>
@@ -13,14 +13,37 @@
         <h1> VALIDACION DE INFORMACION BANCARIA </h1>
     </header>
     <main>
-        <label>
-          <span>ingrese su numero de tarjeta</span>
-          <input type="number" id="numeroDeTarjetaDeCredito">
-          <button name="button" onclick="numeroDeTarjeta()"> validar </button>
-        </label>
-
+        <form>
+            <label for="tipoDeTarjeta">
+                <span>Tipo de Tarjeta</span>
+                <input type="text" id="tipoDeTarjeta">
+            </label>
+            <br>
+            <br>
+            <label for="banco">
+                <span>Ingrese Nombre del Banco</span>
+                <input type="number" id="banco">
+            </label>
+            <br>
+            <br>
+            <label for="fechaDeVencimiento">
+                <span> Fecha de Vencimiento</span>
+                <input type="date" id="fechaDeVencimiento">
+            </label>
+            <br>
+            <br>
+            <label for="numeroTcIngresado">
+                <span>Ingrese su numero de tarjeta</span>
+                <input type="number" id="numeroTcIngresado">
+                <button name="button" id="botonValidar"> VALIDAR </button>
+            </label>
+        </form>
     </main>
-    <footer></footer>
+    <footer>
+        <br>
+        <a> gracias validacion completa</a>
+    </footer>
+    <script src="index.js" type="module"></script>
 </body>
 
 </html>
