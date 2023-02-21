@@ -1,11 +1,11 @@
 // creo un objeto 
 const validator = {
-  esUnaTarjetaValida : (numeroTarjeta) => {
-    if(numeroTarjeta.length == 16){
+  isValid : (numeroTarjeta) => {
+    if(numeroTarjeta.length === 16){
       let arrayNumerico = invertirTarjeta(numeroTarjeta);
       arrayNumerico = multiplicarPares(arrayNumerico);
       const total = sumarElementosArray(arrayNumerico);
-      if(total % 10 == 0){
+      if(total % 10 === 0){
         return true;
       }else{
         return false;
@@ -39,11 +39,11 @@ function multiplicarPares(arrayNumerico) {
 }
 
 function esPar(numero){
-  return (numero % 2 ) == 0;
+  return (numero % 2 ) !== 0;
 }
 
 function esNumeroDosDigitos(numero){
-  return numero >9;
+  return numero >=10;
 }
 
 function sumarDigitos(numero) {
@@ -52,7 +52,7 @@ function sumarDigitos(numero) {
   
   let acumulador = 0;
   arrayNumero.forEach((element) => {
-      acumulador += Number(element);
+    acumulador += Number(element);
   });
   return acumulador;
 }

@@ -15,7 +15,7 @@
     <main>
         <form>
             <label>
-            <div>Elige tu Banco</div>
+            <p>Elige tu Banco</p>
             <select name="bancos" id="bancos">                           
                 <option value="selector"> Click Aqui</option>
                 <option value="Bn">BANCO A LA NACION</option>
@@ -26,7 +26,7 @@
             <br>
             <br>
             <label>
-            <div>Elige Tu Tipo De Tarjeta</div>
+            <p>Elige Tu Tipo De Tarjeta</p>
             <select name="tipodeTarjeta" id="tipodeTarjeta">                           
                 <option value="selector"> Clik Aqui</option>
                 <option value="Tc">TARJETA DE CREDITO</option>
@@ -36,21 +36,21 @@
             <br>
             <br>
             <label>
-            <div class="label">Fecha de Vencimiento</div>       
+            <p class="label">Fecha de Vencimiento</p>       
                 <input type="text" name="mes" maxlength="2" size="4" placeholder="Mes">
                 <input type="text" name="anio" maxlength="2" size="4" data-card="exp_year" value="" placeholder="Año" required>
             </label>
             <br>
             <br>
             <label for="numeroTcIngresado">
-            <div>Ingrese su numero de tarjeta</div>
-                <input type="number" id="numeroTcIngresado">
+            <p>Ingrese su numero de tarjeta</p>
+                <input type="number" id="numeroTcIngresado" placeholder="0000 0000 0000 0000">
                 <button name="button" id="botonValidar"> VALIDAR </button>
             </label>
         </form>
 
         <figure>
-            <img src="tc.jpg">
+            <img src="/src/img/tarjeta.png">
         </figure>
     </main>
 
