@@ -14,34 +14,50 @@
     </header>
     <main>
         <form>
-            <label for="tipoDeTarjeta">
-                <span>Tipo de Tarjeta</span>
-                <input type="text" id="tipoDeTarjeta">
+            <label>
+            <div>Elige tu Banco</div>
+            <select name="bancos" id="bancos">                           
+                <option value="selector"> Click Aqui</option>
+                <option value="Bn">BANCO A LA NACION</option>
+                <option value="Bbva">BBVA CONTINENTAL</option>
+                <option value="Sct">SCOTIABANK</option>       
+            </select>
             </label>
             <br>
             <br>
-            <label for="banco">
-                <span>Ingrese Nombre del Banco</span>
-                <input type="number" id="banco">
+            <label>
+            <div>Elige Tu Tipo De Tarjeta</div>
+            <select name="tipodeTarjeta" id="tipodeTarjeta">                           
+                <option value="selector"> Clik Aqui</option>
+                <option value="Tc">TARJETA DE CREDITO</option>
+                <option value="Td">TARJETA DE DEBITO</option>
+            </select>
             </label>
             <br>
             <br>
-            <label for="fechaDeVencimiento">
-                <span> Fecha de Vencimiento</span>
-                <input type="date" id="fechaDeVencimiento">
+            <label>
+            <div class="label">Fecha de Vencimiento</div>       
+                <input type="text" name="mes" maxlength="2" size="4" placeholder="Mes">
+                <input type="text" name="anio" maxlength="2" size="4" data-card="exp_year" value="" placeholder="Año" required>
             </label>
             <br>
             <br>
             <label for="numeroTcIngresado">
-                <span>Ingrese su numero de tarjeta</span>
+            <div>Ingrese su numero de tarjeta</div>
                 <input type="number" id="numeroTcIngresado">
                 <button name="button" id="botonValidar"> VALIDAR </button>
             </label>
         </form>
+
+        <figure>
+            <img src="tc.jpg">
+        </figure>
     </main>
+
+
     <footer>
         <br>
-        <a> gracias validacion completa</a>
+    <a> gracias validacion completa</a>
     </footer>
     <script src="index.js" type="module"></script>
 </body>
