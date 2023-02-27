@@ -1,22 +1,33 @@
-// creo un objeto 
 const validator = {
   isValid : (numeroTarjeta) => {
+    let respuesta = false;
     if(numeroTarjeta.length >= 11){
       let arrayNumerico = invertirTarjeta(numeroTarjeta);
       arrayNumerico = multiplicarPares(arrayNumerico);
       const total = sumarElementosArray(arrayNumerico);
       if(total % 10 === 0){
-        return true;
-      }else{
-        return false;
+        respuesta = true;  
       }
-    }else{
-      return false
     }
-  }
+    return respuesta
+  },
+  maskify: (numeroTarjeta) => {
+    if(numeroTarjeta.length >= 5){
+      const cuatroDigitos = numeroTarjeta.slice(-4);
+      const arrayNumeroTarjeta = Array.from(numeroTarjeta);
+      const longitudResto = arrayNumeroTarjeta.length - 4; 
+      let numeroEnmascarado = "";
+
+      for (let i = 0; i < longitudResto; i++) {
+        numeroEnmascarado += "#"; 
+      }
+      return numeroEnmascarado + cuatroDigitos;
+    }else{
+      return numeroTarjeta;
+    }
+  },
 };
-
-
+ 
 function invertirTarjeta(numeroTarjeta) {
   const arrayTarjeta = Array.from(numeroTarjeta).reverse();
   const arrayNumerico = arrayTarjeta.map((numeroString) => Number(numeroString));

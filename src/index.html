@@ -13,51 +13,55 @@
         <h1> VALIDACION DE INFORMACION BANCARIA </h1>
     </header>
     <main>
-        <form>
+         <section id="formulario">
             <label>
             <p>Elige tu Banco</p>
             <select name="bancos" id="bancos">                           
                 <option value="selector"> Click Aqui</option>
-                <option value="Bn">BANCO A LA NACION</option>
-                <option value="Bbva">BBVA CONTINENTAL</option>
-                <option value="Sct">SCOTIABANK</option>       
+                <option value="Banco de la Nacion">BANCO A LA NACION</option>
+                <option value="BBVA Continental">BBVA CONTINENTAL</option>
+                <option value="Scotiabank">SCOTIABANK</option>       
             </select>
             </label>
-            <br>
             <br>
             <label>
             <p>Elige Tu Tipo De Tarjeta</p>
             <select name="tipodeTarjeta" id="tipodeTarjeta">                           
                 <option value="selector"> Clik Aqui</option>
-                <option value="Tc">TARJETA DE CREDITO</option>
-                <option value="Td">TARJETA DE DEBITO</option>
+                <option value="Tarjeta De Credito">TARJETA DE CREDITO</option>
+                <option value="Tarjeta De Debito">TARJETA DE DEBITO</option>
             </select>
             </label>
             <br>
-            <br>
             <label>
             <p class="label">Fecha de Vencimiento</p>       
-                <input type="text" name="mes" maxlength="2" size="4" placeholder="Mes">
-                <input type="text" name="anio" maxlength="2" size="4" data-card="exp_year" value="" placeholder="Año" required>
+                <input id="mes" type="text" name="mes" maxlength="2" size="4" placeholder="Mes">
+                <input id="anio" type="text" name="anio" maxlength="2" size="4" placeholder="Año">
             </label>
-            <br>
             <br>
             <label for="numeroTcIngresado">
             <p>Ingrese su numero de tarjeta</p>
                 <input type="number" id="numeroTcIngresado" placeholder="0000 0000 0000 0000">
                 <button name="button" id="botonValidar"> VALIDAR </button>
             </label>
-        </form>
-
-        <figure>
-            <img src="/src/img/tarjeta.png">
-        </figure>
+        </section>
+        <section id="resultado">
+                <p id="textoDeValidacion"> </p>
+                 <figure class="contenedor-imagen">
+                     <img src="/src/img/tarjeta.png" alt="tarjetablanca">
+                </figure>
+                    <p id="numeroDeTarjeta"></p>
+                    <p id="fechaDeVencimiento"></p>
+                    <p id="resTipoDeTarjeta"></p>
+                    <p id="TipoBanco"></p>
+                    <p id="respuesta"></p>
+                    
+                
+        </section>        
     </main>
-
-
     <footer>
         <br>
-    <a> gracias validacion completa</a>
+    <p> Validacion de Tarjeta 2023</p>
     </footer>
     <script src="index.js" type="module"></script>
 </body>
