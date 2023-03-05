@@ -1,10 +1,10 @@
 import validator from './validator.js';
 //detiene la ejecucion de (4-5) hasta que el doc html esta completo
 //oculta la pantalla (seccion2 ) al inicio
-document.addEventListener("DOMContentLoaded", (e) => {
+document.addEventListener("DOMContentLoaded", () => {
   const pantallaResultado = document.getElementById("resultado")
   pantallaResultado.style.display = "none"
-  console.log(e)
+  
 });
 
 document.getElementById("botonValidar").addEventListener("click", function(e) 
@@ -13,9 +13,7 @@ document.getElementById("botonValidar").addEventListener("click", function(e)
   const resultadoValidacion = validator.isValid(numeroIngresado)
 
   const primeraPantalla = document.getElementById("formulario")
-
   const pantallaResultado = document.getElementById("resultado")
-
   const numeroEnmascarado = validator.maskify(numeroIngresado)
 
   //con inner sobre escribo mi etiqueta <p> y traigo mi variable enmascarado

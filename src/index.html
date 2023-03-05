@@ -4,20 +4,20 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel= "stylesheet" href="style.css" />
     <title>Validacion de tarjeta de credito </title>
-    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <header>
+    <header class="encabezado-contenedor">
         <h1> VALIDACION DE INFORMACION BANCARIA </h1>
     </header>
     <main>
          <section id="formulario">
             <label>
             <p>Elige tu Banco</p>
-            <select name="bancos" id="bancos">                           
-                <option value="selector"> Click Aqui</option>
+            <select name="bancos" id="bancos" required>                           
+                <option></option>
                 <option value="Banco de la Nacion">BANCO A LA NACION</option>
                 <option value="BBVA Continental">BBVA CONTINENTAL</option>
                 <option value="Scotiabank">SCOTIABANK</option>       
@@ -26,8 +26,8 @@
             <br>
             <label>
             <p>Elige Tu Tipo De Tarjeta</p>
-            <select name="tipodeTarjeta" id="tipodeTarjeta">                           
-                <option value="selector"> Clik Aqui</option>
+            <select name="tipodeTarjeta" id="tipodeTarjeta" required>                           
+                <option></option>
                 <option value="Tarjeta De Credito">TARJETA DE CREDITO</option>
                 <option value="Tarjeta De Debito">TARJETA DE DEBITO</option>
             </select>
@@ -35,28 +35,26 @@
             <br>
             <label>
             <p class="label">Fecha de Vencimiento</p>       
-                <input id="mes" type="text" name="mes" maxlength="2" size="4" placeholder="Mes">
-                <input id="anio" type="text" name="anio" maxlength="2" size="4" placeholder="Año">
+                <input id="mes" type="text" name="mes" maxlength="2" size="4" placeholder="Mes" required>
+                <input id="anio" type="text" name="anio" maxlength="2" size="4" placeholder="Año" required>
             </label>
             <br>
             <label for="numeroTcIngresado">
             <p>Ingrese su numero de tarjeta</p>
-                <input type="number" id="numeroTcIngresado" placeholder="0000 0000 0000 0000">
+                <input type="text" id="numeroTcIngresado" placeholder="0000 0000 0000 0000" required>
                 <button name="button" id="botonValidar"> VALIDAR </button>
             </label>
         </section>
         <section id="resultado">
                 <p id="textoDeValidacion"> </p>
                  <figure class="contenedor-imagen">
-                     <img src="/src/img/tarjeta.png" alt="tarjetablanca">
-                </figure>
+                     <img id = "img" src="/src/img/mastercard.png" alt="tarjetablanca">
                     <p id="numeroDeTarjeta"></p>
                     <p id="fechaDeVencimiento"></p>
-                    <p id="resTipoDeTarjeta"></p>
                     <p id="TipoBanco"></p>
-                    <p id="respuesta"></p>
-                    
-                
+                </figure>
+                    <p id="resTipoDeTarjeta"></p>
+                    <p id="respuesta"></p>               
         </section>        
     </main>
     <footer>

@@ -1,20 +1,38 @@
-/*{
-    box-sizing: border-box;
-    margin: 0%;
-    padding: 0%;
-}
-/*{
-    background-color: rgb(243, 243, 235);
+.contenedor-imagen {
+  position: relative;
+    text-align: center;
+    color: white;
+    z-index: 1;
+    font-size: 22px;
+    font-weight: bold;
 }
 
-/*.contenedor-imagen {
-background-color: #f2f2f2;
+.contenedor-imagen > p{
+  position: absolute;
+  z-index: 2;
+  color: black;
 }
-.contenedor-imagen img {
-    /*position: absolute;*/
-    /*width: 200px;
-    height:  200px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+
+#numeroDeTarjeta {
+  left: 646px;
+  top: 134px;
+  font-size: 28px;
+}
+
+#fechaDeVencimiento {
+  left: 617px;
+  top: 218px;
+}
+
+#TipoBanco {
+  left: 50%;
+  top: 6%;
+}
+
+img{
+  width: 500px;
+}
+
+h1 {
+  
 }
