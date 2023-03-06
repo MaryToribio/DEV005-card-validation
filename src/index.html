@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
@@ -10,56 +10,61 @@
 
 <body>
     <header class="encabezado-contenedor">
-        <h1> VALIDACION DE INFORMACION BANCARIA </h1>
+        <h1> Validación De Informacion Bancaria </h1>
     </header>
     <main>
          <section id="formulario">
-            <label>
-            <p>Elige tu Banco</p>
-            <select name="bancos" id="bancos" required>                           
-                <option></option>
-                <option value="Banco de la Nacion">BANCO A LA NACION</option>
-                <option value="BBVA Continental">BBVA CONTINENTAL</option>
-                <option value="Scotiabank">SCOTIABANK</option>       
-            </select>
-            </label>
-            <br>
-            <label>
-            <p>Elige Tu Tipo De Tarjeta</p>
-            <select name="tipodeTarjeta" id="tipodeTarjeta" required>                           
-                <option></option>
-                <option value="Tarjeta De Credito">TARJETA DE CREDITO</option>
-                <option value="Tarjeta De Debito">TARJETA DE DEBITO</option>
-            </select>
-            </label>
-            <br>
-            <label>
-            <p class="label">Fecha de Vencimiento</p>       
-                <input id="mes" type="text" name="mes" maxlength="2" size="4" placeholder="Mes" required>
-                <input id="anio" type="text" name="anio" maxlength="2" size="4" placeholder="Año" required>
-            </label>
-            <br>
-            <label for="numeroTcIngresado">
-            <p>Ingrese su numero de tarjeta</p>
-                <input type="text" id="numeroTcIngresado" placeholder="0000 0000 0000 0000" required>
-                <button name="button" id="botonValidar"> VALIDAR </button>
-            </label>
+            <form id="form" >
+                <label>
+                    <p>Elige Tu Tipo De Tarjeta</p>
+                </label>
+                <select name="tipodeTarjeta" id="tipodeTarjeta" required>                           
+                    <option></option>
+                    <option value="Tarjeta De Credito">Tarjeta De Credito</option>
+                    <option value="Tarjeta De Debito">Tarjeta De Credito</option>
+                </select>
+                <label>
+                    <p>Banco de Procedencia</p>
+                </label> 
+                <select name="Banco" id="bancos" required>                           
+                    <option></option>
+                    <option value="Banco Interbank">Banco Interbank</option>
+                    <option value="BCP">BCP</option>
+                    <option value="Scotiabank">Scotiabank</option>
+                    <option value="Bbva Continnetal">Bbva Continnetal</option>  
+                    <option value="Banco de la Nacion">Banco de la Nacion</option>           
+                </select>                                 
+                 <label>
+                    <p class="label">Fecha de Vencimiento</p>       
+                    <input id="mes" type="text" name="mes" maxlength="2" size="4" placeholder="Mes" required>
+                    <input id="anio" type="text" name="anio" maxlength="2" size="4" placeholder="Año" required>
+                </label>
+                <label for="numeroTcIngresado">
+                    <p>Ingrese su numero de tarjeta</p>
+                    <input type="number" id="numeroTcIngresado" placeholder="0000 0000 0000 0000" required>
+                </label>                
+                <button type="submit" name="button"> VALIDAR </button>
+                <br>
+                <br>
+            </form>
         </section>
+                
         <section id="resultado">
-                <p id="textoDeValidacion"> </p>
-                 <figure class="contenedor-imagen">
-                     <img id = "img" src="/src/img/mastercard.png" alt="tarjetablanca">
-                    <p id="numeroDeTarjeta"></p>
-                    <p id="fechaDeVencimiento"></p>
-                    <p id="TipoBanco"></p>
-                </figure>
-                    <p id="resTipoDeTarjeta"></p>
-                    <p id="respuesta"></p>               
+            <p id="textoDeValidacion"> </p>
+            <figure class="contenedor-imagen">
+                <img id = "img" src="/src/img/mastercard.png" alt="tarjetablanca">
+                <p id="numeroDeTarjeta"></p>
+                <p id="fechaDeVencimiento"></p>
+                <p id="TipoBanco"></p>
+            </figure>
+                <p id="respuesta"></p>
+                <p id="resTipoDeTarjeta"></p>
+                <button name="button" id="botonReinicio"> REINICIAR </button> 
+                     <br>  
         </section>        
     </main>
     <footer>
-        <br>
-    <p> Validacion de Tarjeta 2023</p>
+    <p> Información solicitada para pagos seguros en nuestra plataforma 2023 @</p>
     </footer>
     <script src="index.js" type="module"></script>
 </body>

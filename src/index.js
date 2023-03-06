@@ -5,10 +5,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const pantallaResultado = document.getElementById("resultado")
   pantallaResultado.style.display = "none"
   
+  const form = document.getElementById("form");
+  form.addEventListener('submit', formularioFinalizado);
 });
 
-document.getElementById("botonValidar").addEventListener("click", function(e) 
+// creo la funcionalidad del boton de reinicio y por ultimo modifico el formulario con "".reset" para
+// limpiar los campos del formulario
+document.getElementById("botonReinicio").addEventListener("click", function(e) 
 { e.preventDefault();
+  const pantallaResultado = document.getElementById("resultado")
+  const primeraPantalla = document.getElementById("formulario")
+  primeraPantalla.style.display = "block"
+  pantallaResultado.style.display = "none"
+  document.getElementById("form").reset();
+});
+
+
+function formularioFinalizado(event){
+  event.preventDefault();
+
   const numeroIngresado = document.getElementById("numeroTcIngresado").value
   const resultadoValidacion = validator.isValid(numeroIngresado)
 
@@ -45,4 +60,4 @@ document.getElementById("botonValidar").addEventListener("click", function(e)
 
     pResultadoValidacion.innerHTML = "Tarjeta invalida, verfique informacion ingresada"
   }
-});
+}
