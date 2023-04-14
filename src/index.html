@@ -10,18 +10,18 @@
 
 <body>
     <header class="encabezado-contenedor">
-        <h1> Validación De Informacion Bancaria </h1>
+        <h1> Informacion Bancaria </h1>
     </header>
     <main>
          <section id="formulario">
-            <form id="form" >
-                <label>
+            <form action= "ingresaDatos" id="form" >
+                <label for="name">
                     <p>Elige Tu Tipo De Tarjeta</p>
                 </label>
                 <select name="tipodeTarjeta" id="tipodeTarjeta" required>                           
                     <option></option>
                     <option value="Tarjeta De Credito">Tarjeta De Credito</option>
-                    <option value="Tarjeta De Debito">Tarjeta De Credito</option>
+                    <option value="Tarjeta De Debito">Tarjeta De Debito</option>
                 </select>
                 <label>
                     <p>Banco de Procedencia</p>
@@ -45,7 +45,6 @@
                 </label>                
                 <button type="submit" name="button"> VALIDAR </button>
                 <br>
-                <br>
             </form>
         </section>
                 
@@ -59,8 +58,7 @@
             </figure>
                 <p id="respuesta"></p>
                 <p id="resTipoDeTarjeta"></p>
-                <button name="button" id="botonReinicio"> REINICIAR </button> 
-                     <br>  
+                <button name="button" id="botonReinicio"> REINICIAR </button>                 
         </section>        
     </main>
     <footer>
